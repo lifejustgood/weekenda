@@ -1,0 +1,25 @@
+.buttonRow {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+#showListButton {
+   
+    padding: 1rem;
+    background-color: aquamarine;
+    text-decoration: none;
+    margin-top: auto;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-family: monospace, 'Courier New', Courier; 
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    border: none;
+}
+
+#showListButton:hover {
+    opacity: 0.80;
+    box-shadow: 10px 5px 5px rgb(2, 97, 99);
+}

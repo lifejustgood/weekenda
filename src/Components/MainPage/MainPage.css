@@ -1,0 +1,20 @@
+.mainPageHeader {
+    background-image: url('./seaUnsplash.jpg');
+    background-size: cover;
+    min-height: 50rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+
+.motivationQuestion {
+    font-family: monospace, 'Courier New', Courier; 
+    color: #fff;
+    text-align: center;
+    
+}
+
+.secondParagraph {
+    padding-top: 3rem;
+}
