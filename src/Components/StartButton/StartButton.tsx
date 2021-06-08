@@ -1,8 +1,16 @@
 import React from 'react';
 import './StartButton.css';
 
-export function StartButton() {
+interface IProps {
+    isLoaded?: boolean,
+    longWeekendsList?: Array<any>
+}
+
+
+export function StartButton(props: IProps) {
+    // const {isLoaded, longWeekendsList} = props;
     const handleClick = () => {
+        
     }
     return (
         <div className='buttonRow'>
