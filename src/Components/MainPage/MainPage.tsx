@@ -1,6 +1,6 @@
 import React from 'react';
 import './MainPage.css';
-import  { StartButton }  from '../StartButton/StartButton';
+import  { StartButton }  from '../startButton/StartButton';
 import { API_URL } from '../../appsettings';
 
 class MainPage extends React.PureComponent {
