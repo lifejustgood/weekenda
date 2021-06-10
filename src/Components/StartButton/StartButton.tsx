@@ -1,22 +1,14 @@
 import React from 'react';
 import './StartButton.css';
 
-interface IProps {
-    isLoaded?: boolean,
-    longWeekendsList?: Array<any>
-}
-
-
-export function StartButton(props: IProps) {
-    // const {isLoaded, longWeekendsList} = props;
-    const handleClick = () => {
-        
-    }
+export function StartButton(props: any) {
+     const {isLoaded, longWeekendsList} = props;
+    
     return (
         <div className='buttonRow'>
             <button type='button'
                 id='showListButton'
-                onClick={handleClick} >Show Long Weekends</button>
+                onClick={props.onClick} >Show Long Weekends</button>
         </div>
     )
 }
