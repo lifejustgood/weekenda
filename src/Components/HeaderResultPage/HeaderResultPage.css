@@ -1,0 +1,26 @@
+.headerSection {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    flex-direction: column;
+    color:#00cccc;
+}
+
+#headerLogo {
+    display: flex;
+    background-image: url('./waves.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 6rem;
+    align-items: center;
+}
+
+#logo {
+   padding-left: 3rem;
+   height: 70%;
+}
+
+h3 {
+    margin-top: -0.5rem;
+}
