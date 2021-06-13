@@ -4,28 +4,10 @@ import React from 'react';
 import { Switch, Route } from "react-router-dom";
 import { API_URL } from './appsettings';
 import ResultPage from "./Components/ResultPage/ResultPage";
+import {LongWeekendDto, IState } from './Interfaces';
 
-
-type LongWeekendDto =
-  {
-    dayCount: string;
-    endDate: string;
-    needBridgeDay: boolean;
-    startDate: Date;
-  }
-
-interface IProps {
-
-}
-interface IState {
-  error?: string | null,
-  isLoaded?: boolean,
-  longWeekendsList?: Array<LongWeekendDto>,
-}
-
-
-class App extends React.Component<IProps, IState> {
-  constructor(props: IProps) {
+class App extends React.Component<any, IState> {
+  constructor(props:any) {
     super(props);
     this.state = {
       error: null,

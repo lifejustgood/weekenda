@@ -2,19 +2,9 @@ import React from 'react';
 import './MainPage.css';
 import { StartButton } from '../StartButton/StartButton';
 import { useHistory, withRouter } from 'react-router-dom';
+import { IPropsHistory } from '../../Interfaces';
 
-export type LongWeekendDto =
-  {
-    dayCount: string;
-    endDate: string;
-    needBridgeDay: boolean;
-    startDate: Date;
-  }
-
-interface IProps {
-  history: any
-}
-class MainPage extends React.PureComponent<IProps> {
+class MainPage extends React.PureComponent<IPropsHistory> {
 
   redirectToResultPage = () => {
     const { history } = this.props;
@@ -24,7 +14,7 @@ class MainPage extends React.PureComponent<IProps> {
   }
 
   render() {
-    const { history } = this.props;
+    // const { history } = this.props;
 
     return <div className='mainPageHeader'>
       <div className='motivationQuestion'>
