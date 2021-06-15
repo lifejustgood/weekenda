@@ -3,6 +3,7 @@ import { TableLongWeekendsList } from '../TableLongWeekendsList/TableLongWeekend
 import { HeaderResultPage } from '../HeaderResultPage/HeaderResultPage';
 import { IProps } from '../../Interfaces';
 
+import { YearlyCalendar } from '../Calendar/Calendar';
 class ResultPage extends React.PureComponent<IProps> {
 
   render() {
@@ -12,6 +13,7 @@ class ResultPage extends React.PureComponent<IProps> {
         <HeaderResultPage />
         <TableLongWeekendsList longWeekendsList={this.props.longWeekendsList} 
           isLoaded={this.props.isLoaded}/>
+          <YearlyCalendar longWeekendsList={this.props.longWeekendsList}/>
        
       </div>
     )
