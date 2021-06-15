@@ -1,8 +1,14 @@
 export type LongWeekendDto =
   {
     dayCount: string;
-    endDate: string;
+    endDate: Date;
     needBridgeDay: boolean;
+    startDate: Date;
+  }
+
+  export type SelectedWeekendDto =
+  {
+    endDate: Date;
     startDate: Date;
   }
 

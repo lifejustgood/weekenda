@@ -1,5 +1,5 @@
-import './HeaderResultPage.css';
-
+import React from 'react';
+import '../HeaderResultPage/HeaderResultPage.css';
 
 export function HeaderResultPage() {
     return (

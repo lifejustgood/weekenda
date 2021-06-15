@@ -1,3 +1,4 @@
+import React from 'react';
 import './StartButton.css';
 
 export function StartButton(props: any) {
