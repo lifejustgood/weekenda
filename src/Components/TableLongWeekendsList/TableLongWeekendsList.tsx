@@ -1,10 +1,11 @@
 import React from 'react';
 import './TableLongWeekendsList.css';
-import { LongWeekendDto, IProps } from '../../Interfaces';
+import { LongWeekendDto, IProps} from '../../Interfaces';
 
 
-export function TableLongWeekendsList(props: IProps) {
+export function TableLongWeekendsList(props: IProps ) {
     let i: number = 1;
+    // const filteredList = props.filterWeekendsListByCurrentDate();
     const tableBody = props.longWeekendsList?.map((list: LongWeekendDto, indexRow: number) => {
        return <tr key={ indexRow }>
            <td key={i++}>{list.dayCount}</td>
