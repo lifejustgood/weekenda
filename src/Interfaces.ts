@@ -16,6 +16,10 @@ export interface IPropsHistory {
   history: any
 }
 
+export type filterWeekendsListByCurrentDate = {
+  // input: Array<LongWeekendDto>,
+  filteredList: Array<LongWeekendDto>
+}
 
 export interface IProps {
   isLoaded?: boolean,

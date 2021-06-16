@@ -17,5 +17,6 @@ export function YearlyCalendar(props: IProps) {
         return (<Calendar 
             enableRangeSelection={true}
             dataSource = { source }
+            // style="background"
             />)
         }

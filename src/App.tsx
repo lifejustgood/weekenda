@@ -4,7 +4,8 @@ import React from 'react';
 import { Switch, Route } from "react-router-dom";
 import { API_URL } from './appsettings';
 import ResultPage from "./Components/ResultPage/ResultPage";
-import {LongWeekendDto, IState } from './Interfaces';
+import { LongWeekendDto, IState } from './Interfaces';
+
 
 class App extends React.Component<any, IState> {
   constructor(props:any) {
@@ -15,6 +16,8 @@ class App extends React.Component<any, IState> {
       longWeekendsList: new Array<LongWeekendDto>()
     }
   }
+
+ 
 
   componentDidMount() {
     fetch(API_URL)
@@ -43,7 +46,8 @@ class App extends React.Component<any, IState> {
         <Route path="/ResultPage"
           render={(props) => <ResultPage {...props}  
           longWeekendsList={this.state.longWeekendsList} 
-          isLoaded={this.state.isLoaded} />  } />
+          isLoaded={this.state.isLoaded}
+          />  } />
       </Switch>
     );
   }

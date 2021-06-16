@@ -12,7 +12,7 @@ class ResultPage extends React.PureComponent<IProps> {
       <div>
         <HeaderResultPage />
         <TableLongWeekendsList longWeekendsList={this.props.longWeekendsList} 
-          isLoaded={this.props.isLoaded}/>
+          isLoaded={this.props.isLoaded} />
           <YearlyCalendar longWeekendsList={this.props.longWeekendsList}/>
        
       </div>
