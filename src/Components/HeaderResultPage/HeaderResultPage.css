@@ -9,16 +9,16 @@
 
 #headerLogo {
     display: flex;
-    background-image: url('./waves.jpg');
+    background-image: url('../../images/waves.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    height: 6rem;
+    height: 4rem;
     align-items: center;
 }
 
 #logo {
    padding-left: 3rem;
-   height: 50%;
+   height: 60%;
 }
 
 h3 {
