@@ -1,0 +1,7 @@
+#calendarContainer {
+    display: flex;
+    justify-content: center;
+    margin: 2rem auto;
+    width: 95%;
+    flex-direction: column;
+}

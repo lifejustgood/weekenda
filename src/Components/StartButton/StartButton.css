@@ -1,13 +1,13 @@
 .buttonRow {
     display: flex;
     justify-content: center;
-    margin-top: 2rem;
+    margin-top: 3rem;
 }
 
 #showListButton {
    
     padding: 1rem;
-    background-color: aquamarine;
+    background-color: #00cccc;
     text-decoration: none;
     margin-top: auto;
     text-align: center;
