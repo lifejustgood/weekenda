@@ -4,20 +4,18 @@ import React from 'react';
 import { Switch, Route } from "react-router-dom";
 import { API_URL } from './appsettings';
 import ResultPage from "./Components/ResultPage/ResultPage";
-import { LongWeekendDto, IState } from './Interfaces';
+import { IProps } from './Interfaces';
+import { LongWeekendDto } from './datatypes';
 
 
-class App extends React.Component<any, IState> {
+class App extends React.PureComponent<any, IProps> {
   constructor(props:any) {
     super(props);
     this.state = {
-      error: null,
       isLoaded: false,
       longWeekendsList: new Array<LongWeekendDto>()
     }
-  }
-
- 
+  } 
 
   componentDidMount() {
     fetch(API_URL)
@@ -31,9 +29,9 @@ class App extends React.Component<any, IState> {
         },
         (error) => {
           this.setState({
-            isLoaded: false,
-            error
+            isLoaded: false
           });
+          console.log(error);
         }
       )
   }
@@ -51,7 +49,6 @@ class App extends React.Component<any, IState> {
       </Switch>
     );
   }
-
 }
 
 export default App;

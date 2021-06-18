@@ -1,6 +1,7 @@
 import React from 'react';
 import './TableLongWeekendsList.css';
-import { LongWeekendDto, IProps} from '../../Interfaces';
+import {  IProps} from '../../Interfaces';
+import { LongWeekendDto } from '../../datatypes';
 
 
 export function TableLongWeekendsList(props: IProps ) {
