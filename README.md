@@ -1,5 +1,5 @@
-# weekenda
-project for generating long weekends to help with vacation planning. 
+# Weekenda description
+Project for generating long weekends to help with vacation planning. 
 Currently our project support only current year and Ukraine country.
 
 ## Local setup
