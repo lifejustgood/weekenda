@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/static/css/main.1436ca3b.chunk.css",
-    "main.js": "/static/js/main.c12993b0.chunk.js",
-    "main.js.map": "/static/js/main.c12993b0.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.7dde6b3a.js",
-    "runtime-main.js.map": "/static/js/runtime-main.7dde6b3a.js.map",
-    "static/js/2.b150ae21.chunk.js": "/static/js/2.b150ae21.chunk.js",
-    "static/js/2.b150ae21.chunk.js.map": "/static/js/2.b150ae21.chunk.js.map",
-    "static/js/3.790ee68b.chunk.js": "/static/js/3.790ee68b.chunk.js",
-    "static/js/3.790ee68b.chunk.js.map": "/static/js/3.790ee68b.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/main.1436ca3b.chunk.css.map": "/static/css/main.1436ca3b.chunk.css.map",
-    "static/js/2.b150ae21.chunk.js.LICENSE.txt": "/static/js/2.b150ae21.chunk.js.LICENSE.txt",
-    "static/media/MainPage.css": "/static/media/wave3.9c0baf3d.png",
-    "static/media/HeaderResultPage.css": "/static/media/waves.4f422f59.jpg"
+    "main.css": "/weekenda/static/css/main.085fb344.chunk.css",
+    "main.js": "/weekenda/static/js/main.64268a81.chunk.js",
+    "main.js.map": "/weekenda/static/js/main.64268a81.chunk.js.map",
+    "runtime-main.js": "/weekenda/static/js/runtime-main.6a96040a.js",
+    "runtime-main.js.map": "/weekenda/static/js/runtime-main.6a96040a.js.map",
+    "static/js/2.b150ae21.chunk.js": "/weekenda/static/js/2.b150ae21.chunk.js",
+    "static/js/2.b150ae21.chunk.js.map": "/weekenda/static/js/2.b150ae21.chunk.js.map",
+    "static/js/3.790ee68b.chunk.js": "/weekenda/static/js/3.790ee68b.chunk.js",
+    "static/js/3.790ee68b.chunk.js.map": "/weekenda/static/js/3.790ee68b.chunk.js.map",
+    "index.html": "/weekenda/index.html",
+    "static/css/main.085fb344.chunk.css.map": "/weekenda/static/css/main.085fb344.chunk.css.map",
+    "static/js/2.b150ae21.chunk.js.LICENSE.txt": "/weekenda/static/js/2.b150ae21.chunk.js.LICENSE.txt",
+    "static/media/MainPage.css": "/weekenda/static/media/wave3.9c0baf3d.png",
+    "static/media/HeaderResultPage.css": "/weekenda/static/media/waves.4f422f59.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.7dde6b3a.js",
+    "static/js/runtime-main.6a96040a.js",
     "static/js/2.b150ae21.chunk.js",
-    "static/css/main.1436ca3b.chunk.css",
-    "static/js/main.c12993b0.chunk.js"
+    "static/css/main.085fb344.chunk.css",
+    "static/js/main.64268a81.chunk.js"
   ]
 }
