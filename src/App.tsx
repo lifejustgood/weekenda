@@ -1,5 +1,4 @@
 import MainPage from './Components/MainPage/MainPage';
-import './App.css';
 import React from 'react';
 import { Switch, Route } from "react-router-dom";
 import { API_URL } from './appsettings';

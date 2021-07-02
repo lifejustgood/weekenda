@@ -4,7 +4,7 @@
     justify-content: center;
     margin: 0 auto;
     flex-direction: column;
-    color:#00cccc;
+    color: #00cccc;
 }
 
 #headerLogo {
@@ -17,10 +17,21 @@
 }
 
 #logo {
-   padding-left: 3rem;
-   height: 60%;
+    padding-left: 3rem;
+    height: 60%;
 }
 
 h3 {
     margin-top: -0.5rem;
 }
+
+@media only screen and (min-width: 320px) and (max-width: 1024px) {
+    #headerLogo {
+        justify-content: center;
+    }
+    #logo {
+        justify-content: center;
+        padding-left: 0;
+    }
+}
+

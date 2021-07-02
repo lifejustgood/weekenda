@@ -1,36 +1,65 @@
-.tableLongWeekendsList {
-    display: flex;
-    justify-content: center;
-    margin-top: 0.3rem;
-}
-
-.tableBody {
-    border-collapse: collapse;
-    display: flex;
-    border-bottom: 2px solid  #00cccc;
-    box-shadow: 0px 0px 20px rgba(0,0,0,0.10),
-     0px 10px 20px rgba(0,0,0,0.05),
-     0px 20px 20px rgba(0,0,0,0.05),
-     0px 30px 20px rgba(0,0,0,0.05);
-}
-
-.tableBody th, td, tr {
+th, td, tr {
     padding: 1rem 2rem 1rem 2rem;
     text-align: center;
     border: 1px solid #eee;
     color: #999;
-
 }
-.tableBody th {
+
+.tableLongWeekendsListContainer {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 0.3rem;
+}
+
+.tableLongWeekendsList {
+    border-collapse: collapse;
+    border-bottom: 2px solid #00cccc;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.10), 
+    0px 10px 20px rgba(0, 0, 0, 0.05), 
+    0px 20px 20px rgba(0, 0, 0, 0.05), 
+    0px 30px 20px rgba(0, 0, 0, 0.05);
+}
+
+.tableHeadList * th {
     background: #00cccc;
     color: #fff;
     text-transform: uppercase;
     font-size: 1rem;
     font-weight: bold;
 }
-.tableBody tr:hover {
-    background: #f4f4f4;    
+
+.tableBodyList > tr:hover {
+    background: #f4f4f4;
 }
-.tableBody td:hover {
+
+.listItem:hover {
     color: #555;
- }
+}
+
+@media only screen and (max-width: 768px) {
+    
+    .tableLongWeekendsList {
+        width: 90%;
+        font-size: 0.9rem;
+    }
+
+    .tableLongWeekendsList th, 
+    .tableLongWeekendsList td, 
+    .tableLongWeekendsList tr {
+        padding: 0.5rem;
+    }
+
+    .tableHeadList * th {
+        text-transform: none;
+        font-size: 1rem;
+    }   
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .tableLongWeekendsList th, 
+    .tableLongWeekendsList td, 
+    .tableLongWeekendsList tr {
+        padding: 0.7rem;
+    }
+}
