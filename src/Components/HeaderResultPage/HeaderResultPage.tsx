@@ -5,12 +5,12 @@ import Logo from '../../images/logo.png';
 
 export function HeaderResultPage() {
     return (
-        <div className='headerSection'>
+        <div className='headerContainer'>
             <div id='headerLogo'>
                 <img src={Logo} alt='logoWeekenda' id='logo'></img> 
             </div>
-            <h2>LIST OF LONG WEEKENDS</h2>
-            <h3>UKRAINE, 2021</h3>
+            <h3>LIST OF LONG WEEKENDS</h3>
+            <h4>UKRAINE</h4>
         </div>
     )
 }

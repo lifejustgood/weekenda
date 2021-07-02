@@ -1,10 +1,15 @@
-.headerSection {
+
+h4 {
+    margin-top: -0.5rem;
+}
+
+.headerContainer {
     text-align: center;
     display: flex;
     justify-content: center;
     margin: 0 auto;
     flex-direction: column;
-    color:#00cccc;
+    color: #00cccc;
 }
 
 #headerLogo {
@@ -12,15 +17,29 @@
     background-image: url('../../images/waves.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    height: 4rem;
+    height: 3rem;
     align-items: center;
+    justify-content: center;
 }
 
 #logo {
-   padding-left: 3rem;
-   height: 60%;
+    justify-content: center;
+    height: 60%;
 }
 
-h3 {
-    margin-top: -0.5rem;
+
+
+@media only screen and (min-width: 1200px) {
+    h3 {
+        font-size: 1.3rem;
+    }
+    
+    #headerLogo {
+        justify-content: flex-start;
+    }
+
+    #logo {
+        padding-left: 3rem;
+        
+    }
 }
