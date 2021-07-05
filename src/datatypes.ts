@@ -14,3 +14,6 @@ export type LongWeekendDto = {
     // input: Array<LongWeekendDto>,
     filteredList: Array<LongWeekendDto>;
   };
+
+  export type OptionType = { value: string, label: string, key: string }
+  export type OptionsType = Array<OptionType>

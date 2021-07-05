@@ -1,11 +1,11 @@
 import React from 'react';
 import './Calendar.css';
-import { IProps } from '../../Interfaces';
+import { LongWeekendsProps } from '../../Interfaces';
 import { SelectedWeekendDto } from '../../datatypes';
 
 const Calendar = require('rc-year-calendar');
 
-export function YearlyCalendar(props: IProps) {
+export function YearlyCalendar(props: LongWeekendsProps) {
     let source: SelectedWeekendDto[] | undefined;
     const startFromMonday = 1;
 

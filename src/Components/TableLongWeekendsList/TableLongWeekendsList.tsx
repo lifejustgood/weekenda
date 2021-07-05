@@ -1,10 +1,10 @@
 import React from 'react';
 import './TableLongWeekendsList.css';
-import {  IProps} from '../../Interfaces';
+import { LongWeekendsProps } from '../../Interfaces';
 import { LongWeekendDto } from '../../datatypes';
 
 
-export function TableLongWeekendsList(props: IProps ) {
+export function TableLongWeekendsList(props: LongWeekendsProps ) {
     let i = 1;
     const tableBody = props.longWeekendsList?.map((list: LongWeekendDto, indexRow: number) => {
        return <tr key={ indexRow }>
@@ -16,7 +16,8 @@ export function TableLongWeekendsList(props: IProps ) {
    })
 
     return (
-        <div className='tableLongWeekendsListContainer'>
+        !props.isLoaded ? <p>'Loading...'</p> : 
+       <div className='tableLongWeekendsListContainer'>
             <table className='tableLongWeekendsList'>
                 <thead className='tableHeadList'>
                     <tr>

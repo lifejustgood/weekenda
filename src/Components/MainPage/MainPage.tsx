@@ -2,22 +2,19 @@ import React from 'react';
 import './MainPage.css';
 import { MainPageHeader } from './MainPageHeader';
 import { StartButton } from '../StartButton/StartButton';
-import { IPropsHistory } from '../../Interfaces';
+import { SelectCountryProps } from '../../Interfaces';
+import  { SelectCountryForm } from './SelectCountryForm';
 
-class MainPage extends React.PureComponent<IPropsHistory> {
+class MainPage extends React.PureComponent<SelectCountryProps> {
 
-  redirectToResultPage = () => {
-    const { history } = this.props;
-    console.log("redirect works");
-
-    history.push('/ResultPage');
-  }
+  
 
   render() {
     return (
       <div className='mainPageHeader'>
         <MainPageHeader />
-        <StartButton onClick={this.redirectToResultPage} />
+        <SelectCountryForm handleCountryChange={this.props.handleCountryChange}/> 
+        <StartButton handleButtonClick={this.props.handleButtonClick} />
       </div>
     )
 
