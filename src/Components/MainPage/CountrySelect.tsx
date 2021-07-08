@@ -12,7 +12,7 @@ const options: OptionsType = [
 ]
 
 
-export function SelectCountryForm (props: SelectCountryProps | any ){
+export function CountrySelect (props: SelectCountryProps | any ){
     return (
       <Select 
       className='selectForm'

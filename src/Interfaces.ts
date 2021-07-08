@@ -14,9 +14,8 @@ export interface AppState {
   
 }
 export interface AppProps {
-  history: any;
   handleCountryChange: (event: React.ChangeEvent<HTMLSelectElement>) => void;
-  handleButtonClick: (event: React.MouseEvent<HTMLSelectElement>) => void
+  handleApiRequest: (event: React.MouseEvent<HTMLSelectElement>) => void
 }
 
 
@@ -36,6 +35,9 @@ export interface CountryProps {
 }
 
 export interface SelectCountryProps {
+  selectedCountryKey: string;
+  history: any;
   handleCountryChange: (event: React.ChangeEvent<HTMLSelectElement>) => void;
-  handleButtonClick: (event: React.MouseEvent<HTMLSelectElement>) => void
+  handleApiRequest: any;
+  
 }

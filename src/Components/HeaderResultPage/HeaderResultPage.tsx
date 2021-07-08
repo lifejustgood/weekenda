@@ -9,8 +9,8 @@ export function HeaderResultPage(props: CountryProps) {
             <div id='headerLogo'>
                 <img src={Logo} alt='logoWeekenda' id='logo'></img> 
             </div>
-            <h3>LIST OF LONG WEEKENDS IN ${props.selectedCountry}</h3>
-            <h4>UKRAINE</h4>
+            <h3>LIST OF LONG WEEKENDS</h3>
+            <h4>{props.selectedCountry}</h4>
         </div>
     )
 }
