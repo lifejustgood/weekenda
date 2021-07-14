@@ -1,19 +1,28 @@
 import React from 'react';
 import Select from 'react-select';
-import { OptionsType } from '../../datatypes';
+import { OptionsType, OptionType } from '../../datatypes';
 import { SelectCountryProps } from '../../Interfaces';
+import { GetCountryOptions } from './CountryOptions';
 import './MainPage.css';
 
-const options: OptionsType = [
-  { value: 'Austria', label: 'Austria', key: 'AT' },
-  { value: 'Ukraine', label: 'Ukraine', key: 'UA' },
-  { value: 'Slovakia', label: 'Slovakia', key: 'SK' },
-  { value: 'Norway', label: 'Norway', key: 'NO' }
-]
+function setLabelOnAvailableCountries(availableCountries: OptionsType = []): OptionsType {
+  
+  console.log('available countries=', availableCountries);
+  const countryOptions = availableCountries.map((country: OptionType) => (
+      {
+          ...country,
+          label: country.value
+      }
+  ))
+  return countryOptions;
+}
 
 
 export function CountrySelect (props: SelectCountryProps | any ){
-    return (
+  const availableCountries = GetCountryOptions();
+  
+  const options: OptionsType = setLabelOnAvailableCountries(availableCountries);  
+  return (
       <Select 
       className='selectForm'
       onChange={props.handleCountryChange}

@@ -21,7 +21,7 @@ function App(props: AppProps) {
 
   const handleApiRequest = (selectedCountryKey: string) => {
     const userRequest = `${API_URL}${selectedCountryKey}`;
-    console.log('SuserRequest=', userRequest);
+    console.log('UserRequest=', userRequest);
     fetch(userRequest)
       .then(res => res.json())
       .then(
