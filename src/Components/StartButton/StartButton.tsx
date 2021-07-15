@@ -1,7 +1,11 @@
 import React from 'react';
 import './StartButton.css';
 
-export function StartButton(props: any) {
+interface IStartButtonProps {
+    redirectToResultPage() : void;
+}
+
+export function StartButton(props: IStartButtonProps) {
 
 
     return (

@@ -3,23 +3,26 @@ import React from 'react';
 import { Switch, Route } from "react-router-dom";
 import { API_URL } from './appsettings';
 import ResultPage from "./Components/ResultPage/ResultPage";
-import { AppProps } from './Interfaces';
-import { LongWeekendDto } from './datatypes';
+import { HandleApiRequestFunction, HandleCountryChangeFunction, LongWeekendDto } from './datatypes';
 
 
 
-function App(props: AppProps) {
+function App() {
   const [isLoaded, setIsLoaded] = React.useState(false);
   const [longWeekendsList, setLongWeekendsList] = React.useState(new Array<LongWeekendDto>());
   const [selectedCountry, setSelectedCountry] = React.useState('');
   const [selectedCountryKey, setSelectedCountryKey] = React.useState('');
 
-  const handleCountryChange = (event: any) => {
-    setSelectedCountry(event.value);
-    setSelectedCountryKey(event.key);
+  const handleCountryChange: HandleCountryChangeFunction = (option) => {
+    if (option !== null) {
+      const newCountry  = option.value; 
+    const newCountryKey = option.key;
+    setSelectedCountry(newCountry);
+    setSelectedCountryKey(newCountryKey);
+    }
   }
 
-  const handleApiRequest = (selectedCountryKey: string) => {
+  const handleApiRequest: HandleApiRequestFunction = (selectedCountryKey) => {
     const userRequest = `${API_URL}${selectedCountryKey}`;
     console.log('UserRequest=', userRequest);
     fetch(userRequest)

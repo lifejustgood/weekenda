@@ -16,7 +16,7 @@ export function TableLongWeekendsList(props: LongWeekendsProps ) {
    })
 
     return (
-        !props.isLoaded ? <p>'Loading...'</p> : 
+        !props.isLoaded ? <p>Go back to the firsr page and select a country!</p> : 
        <div className='tableLongWeekendsListContainer'>
             <table className='tableLongWeekendsList'>
                 <thead className='tableHeadList'>
