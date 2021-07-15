@@ -3,51 +3,60 @@ import React from 'react';
 import { Switch, Route } from "react-router-dom";
 import { API_URL } from './appsettings';
 import ResultPage from "./Components/ResultPage/ResultPage";
-import { IProps } from './Interfaces';
-import { LongWeekendDto } from './datatypes';
+import { HandleApiRequestFunction, HandleCountryChangeFunction, LongWeekendDto } from './datatypes';
 
 
-class App extends React.PureComponent<any, IProps> {
-  constructor(props:any) {
-    super(props);
-    this.state = {
-      isLoaded: false,
-      longWeekendsList: new Array<LongWeekendDto>()
+
+function App() {
+  const [isLoaded, setIsLoaded] = React.useState(false);
+  const [longWeekendsList, setLongWeekendsList] = React.useState(new Array<LongWeekendDto>());
+  const [selectedCountry, setSelectedCountry] = React.useState('');
+  const [selectedCountryKey, setSelectedCountryKey] = React.useState('');
+
+  const handleCountryChange: HandleCountryChangeFunction = (option) => {
+    if (option !== null) {
+      const newCountry  = option.value; 
+    const newCountryKey = option.key;
+    setSelectedCountry(newCountry);
+    setSelectedCountryKey(newCountryKey);
     }
-  } 
+  }
 
-  componentDidMount() {
-    fetch(API_URL)
+  const handleApiRequest: HandleApiRequestFunction = (selectedCountryKey) => {
+    const userRequest = `${API_URL}${selectedCountryKey}`;
+    console.log('UserRequest=', userRequest);
+    fetch(userRequest)
       .then(res => res.json())
       .then(
         (result) => {
-          this.setState({
-            isLoaded: true,
-            longWeekendsList: result
-          });
+          console.log('result=', result);
+          setIsLoaded(true);
+          setLongWeekendsList(result);
         },
         (error) => {
-          this.setState({
-            isLoaded: false
-          });
+          setIsLoaded(false);
           console.log(error);
         }
       )
   }
-  
-  render() {
 
-    return (
-      <Switch>
-        <Route path="/" exact component={MainPage} />
-        <Route path="/ResultPage"
-          render={(props) => <ResultPage {...props}  
-          longWeekendsList={this.state.longWeekendsList} 
-          isLoaded={this.state.isLoaded}
-          />  } />
-      </Switch>
-    );
-  }
+  return (
+    <Switch>
+      <Route path="/" exact
+        render={(props) => <MainPage {...props}
+          handleCountryChange={handleCountryChange}
+          handleApiRequest={handleApiRequest}
+          selectedCountryKey={selectedCountryKey}
+        />} />
+      <Route path="/ResultPage"
+        render={(props) => <ResultPage  {...props}
+          longWeekendsList={longWeekendsList}
+          isLoaded={isLoaded}
+          selectedCountry={selectedCountry}
+        />} />
+    </Switch>
+  );
+
 }
 
 export default App;

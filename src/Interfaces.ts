@@ -1,10 +1,9 @@
 import { LongWeekendDto } from './datatypes';
-
-export interface IPropsHistory {
-  history: any;
-}
-
-export interface IProps {
+export interface LongWeekendsProps {
   isLoaded?: boolean;
   longWeekendsList: Array<LongWeekendDto>;
 }
+export interface CountryProps {
+  selectedCountry: string
+}
+

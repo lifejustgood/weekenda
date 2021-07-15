@@ -5,8 +5,8 @@
 }
 
 #showListButton {
-   
-    padding: 1rem;
+   /* width: 70%; */
+    padding: 0.7rem;
     background-color: #00cccc;
     text-decoration: none;
     margin-top: auto;
@@ -15,7 +15,7 @@
     font-family: monospace, 'Courier New', Courier; 
     cursor: pointer;
     border-radius: 5px;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     border: none;
 }
 
