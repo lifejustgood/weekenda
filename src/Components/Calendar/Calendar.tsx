@@ -21,7 +21,8 @@ export function YearlyCalendar(props: LongWeekendsProps) {
                 enableRangeSelection = {true}
                 dataSource = {source}
                 weekStart = { startFromMonday }
-                //style="background"               
+                // eslint-disable-next-line react/style-prop-object
+                style="background"               
             />
         </div>
     )

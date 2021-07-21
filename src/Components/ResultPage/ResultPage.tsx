@@ -4,7 +4,7 @@ import { HeaderResultPage } from '../HeaderResultPage/HeaderResultPage';
 import { YearlyCalendar } from '../Calendar/Calendar';
 import { LongWeekendDto } from '../../datatypes';
 
-interface ResultPageProps {
+interface ResultPageProps  {
   isLoaded?: boolean;
   longWeekendsList: Array<LongWeekendDto>;
   selectedCountry: string
@@ -14,6 +14,7 @@ class ResultPage extends React.PureComponent<ResultPageProps> {
   render() {
 
     return (
+    
       <div>
         <HeaderResultPage selectedCountry={this.props.selectedCountry} />
         <TableLongWeekendsList longWeekendsList={this.props.longWeekendsList}
