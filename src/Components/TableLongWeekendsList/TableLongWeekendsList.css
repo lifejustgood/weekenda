@@ -2,7 +2,7 @@ th, td, tr {
     padding: 0.5rem;
     text-align: center;
     border: 1px solid #eee;
-    color: #999;
+    color: #555;;
 }
 
 .tableLongWeekendsListContainer {
@@ -32,11 +32,12 @@ th, td, tr {
 
 .tableBodyList > tr:hover {
     background: #f4f4f4;
+    font-weight: bold;
 }
 
-.listItem:hover {
-    color: #555;
-}
+/* .listItem:hover {
+    font-weight: bold;
+} */
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
     .tableLongWeekendsListContainer {

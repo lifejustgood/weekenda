@@ -1,6 +1,6 @@
 import MainPage from './Components/MainPage/MainPage';
 import React from 'react';
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, Redirect } from "react-router-dom";
 import { API_URL } from './appsettings';
 import ResultPage from "./Components/ResultPage/ResultPage";
 import { HandleApiRequestFunction, HandleCountryChangeFunction, LongWeekendDto } from './datatypes';
@@ -14,12 +14,10 @@ function App() {
   const [selectedCountryKey, setSelectedCountryKey] = React.useState('');
 
   const handleCountryChange: HandleCountryChangeFunction = (option) => {
-    if (option !== null) {
-      const newCountry  = option.value; 
-    const newCountryKey = option.key;
+    const newCountry = option!.value;
+    const newCountryKey = option!.key;
     setSelectedCountry(newCountry);
     setSelectedCountryKey(newCountryKey);
-    }
   }
 
   const handleApiRequest: HandleApiRequestFunction = (selectedCountryKey) => {
@@ -32,12 +30,14 @@ function App() {
           console.log('result=', result);
           setIsLoaded(true);
           setLongWeekendsList(result);
+
         },
         (error) => {
           setIsLoaded(false);
           console.log(error);
         }
       )
+
   }
 
   return (
@@ -48,15 +48,25 @@ function App() {
           handleApiRequest={handleApiRequest}
           selectedCountryKey={selectedCountryKey}
         />} />
-      <Route path="/ResultPage"
-        render={(props) => <ResultPage  {...props}
-          longWeekendsList={longWeekendsList}
-          isLoaded={isLoaded}
-          selectedCountry={selectedCountry}
-        />} />
+      <Route 
+        path='/ResultPage'
+        render={(props) =>
+          isLoaded ? (
+            <ResultPage  {...props}
+              longWeekendsList={longWeekendsList}
+              isLoaded={isLoaded}
+              selectedCountry={selectedCountry} />
+        ) : (
+          <Redirect to='/'  />
+          )
+          }
+
+      />
     </Switch>
   );
 
 }
 
 export default App;
+
+

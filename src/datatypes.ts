@@ -16,8 +16,7 @@ export type FilterWeekendsListByCurrentDate = {
   filteredList: Array<LongWeekendDto>;
 };
 
-// export type HandleCountryChangeFunction = (e: React.ChangeEvent<HTMLSelectElement> ) => void; 
-export type HandleCountryChangeFunction = (option: OptionType | null) => void; 
+export type HandleCountryChangeFunction = (option: OptionType) => void; 
 
 export type HandleApiRequestFunction = (selectedCountryKey: string) => void;
 

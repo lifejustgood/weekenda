@@ -9,7 +9,6 @@ interface CountrySelectProps {
 }
 
 function setLabelOnAvailableCountries(availableCountries: OptionsType = []): OptionsType {
-  console.log('available countries=', availableCountries);
   const countryOptions = availableCountries.map((country: OptionType) => (
     {
       ...country,
@@ -21,13 +20,13 @@ function setLabelOnAvailableCountries(availableCountries: OptionsType = []): Opt
 
 
 export function CountrySelect(props: CountrySelectProps) {
-  const availableCountries = GetCountryOptions();
-
+  const availableCountries  = GetCountryOptions();
   const options: OptionsType = setLabelOnAvailableCountries(availableCountries);
-  return (
+  
+   return (
     <Select
       className='selectForm'
-      onChange={option => props.handleCountryChange(option)} 
+      onChange={option => props.handleCountryChange(option!)} 
       options={options}
       autoFocus={true} />
   );

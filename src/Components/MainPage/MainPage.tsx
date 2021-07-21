@@ -5,6 +5,7 @@ import { StartButton } from '../StartButton/StartButton';
 import { CountrySelect } from './CountrySelect';
 import { HandleApiRequestFunction, HandleCountryChangeFunction } from '../../datatypes';
 
+
 interface MainPageProps {
   selectedCountryKey: string;
   history: any;
@@ -16,11 +17,9 @@ class MainPage extends React.PureComponent<MainPageProps> {
   redirectToResultPage = () => {
     let { history } = this.props;
     this.props.handleApiRequest(this.props.selectedCountryKey);
-    history.push('/ResultPage');
-
+    history.push('/ResultPage', );
     console.log("redirect works");
   }
-
 
   render() {
     return (
