@@ -1,9 +1,10 @@
 import { LongWeekendDto } from './datatypes';
+import { SelectedCountry } from './datatypes';
 export interface LongWeekendsProps {
   isLoaded?: boolean;
-  longWeekendsList: Array<LongWeekendDto>;
+  longWeekendsList?: Array<LongWeekendDto>;
 }
 export interface CountryProps {
-  selectedCountry: string
+ selectedCountry?: SelectedCountry
 }
 

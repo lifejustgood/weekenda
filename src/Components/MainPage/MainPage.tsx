@@ -1,39 +1,36 @@
-import React from 'react';
-import './MainPage.css';
-import { MainPageHeader } from './MainPageHeader';
-import { StartButton } from '../StartButton/StartButton';
-import { CountrySelect } from './CountrySelect';
-import { HandleApiRequestFunction, HandleCountryChangeFunction } from '../../datatypes';
+import React from "react";
+import "./MainPage.css";
+import { MainPageHeader } from "./MainPageHeader";
+import { StartButton } from "../StartButton/StartButton";
+import { CountrySelect } from "./CountrySelect";
+import { useSelector, useDispatch } from "react-redux";
+import { loadList } from "../../redux/reducers/longWeekendsSlice";
+import { RootState } from "../../redux/configureStore";
 
-
-interface MainPageProps {
-  selectedCountryKey: string;
+interface IHistory {
   history: any;
-  handleCountryChange: HandleCountryChangeFunction;
-  handleApiRequest: HandleApiRequestFunction;
 }
 
-class MainPage extends React.PureComponent<MainPageProps> {
-  redirectToResultPage = () => {
-    let { history } = this.props;
-    this.props.handleApiRequest(this.props.selectedCountryKey);
-    history.push('/ResultPage', );
+function MainPage(props: IHistory) {
+  const dispatch = useDispatch();
+  const key = useSelector(
+    (state: RootState) => state.selectedCountry.selectedCountryKey
+  );
+
+  const redirectToResultPage = () => {
+    let { history } = props;
+    dispatch(loadList(key));
+    history.push("/ResultPage");
     console.log("redirect works");
-  }
+  };
 
-  render() {
-    return (
-      <div className='mainPageHeader'>
-        <MainPageHeader />
-        <CountrySelect
-          handleCountryChange={this.props.handleCountryChange} />
-        <StartButton
-          redirectToResultPage={this.redirectToResultPage} />
-      </div>
-    )
-
-
-  }
+  return (
+    <div className="mainPageHeader">
+      <MainPageHeader />
+      <CountrySelect />
+      <StartButton redirectToResultPage={redirectToResultPage} />
+    </div>
+  );
 }
 
 export default MainPage;

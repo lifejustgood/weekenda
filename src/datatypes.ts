@@ -1,4 +1,5 @@
 
+
 export type LongWeekendDto = {
   dayCount: string;
   endDate: Date;
@@ -11,14 +12,21 @@ export type SelectedWeekendDto = {
   startDate: Date;
 };
 
-export type FilterWeekendsListByCurrentDate = {
-  // input: Array<LongWeekendDto>,
-  filteredList: Array<LongWeekendDto>;
+export type SelectedCountry = {
+  selectedCountryName: string;
+  selectedCountryKey: string;
 };
 
-export type HandleCountryChangeFunction = (option: OptionType) => void; 
+// export type FilterWeekendsListByCurrentDate = {
+//   // input: Array<LongWeekendDto>,
+//   filteredList: Array<LongWeekendDto>;
+// };
 
-export type HandleApiRequestFunction = (selectedCountryKey: string) => void;
+export type HandleCountryChangeFunction = (option: OptionType) => void;
 
-export type OptionType = { 'value': string, label?: string, 'key': string }
-export type OptionsType = Array<OptionType>
+export type HandleApiRequestFunction = (key: string) => void;
+
+export type OptionType = { value: string; label?: string; key: string };
+export type OptionsType = Array<OptionType>;
+
+

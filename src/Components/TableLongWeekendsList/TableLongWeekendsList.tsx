@@ -1,12 +1,16 @@
 import React from 'react';
 import './TableLongWeekendsList.css';
-import { LongWeekendsProps } from '../../Interfaces';
 import { LongWeekendDto } from '../../datatypes';
+import { useSelector } from 'react-redux';
+import { RootState } from '../../redux/configureStore';
 
 
-export function TableLongWeekendsList(props: LongWeekendsProps) {
+
+export function TableLongWeekendsList() {
+    const longWeekendsList = useSelector((state: RootState) => state.longWeekendsList );
+    
     let i = 1;
-    const tableBody = props.longWeekendsList?.map((list: LongWeekendDto, indexRow: number) => {
+    const tableBody = longWeekendsList?.map((list: LongWeekendDto, indexRow: number) => {
         return <tr key={indexRow}>
             <td key={i++} className="listItem">{list.dayCount}</td>
             <td key={i++} className="listItem">{list.startDate}</td>
@@ -16,7 +20,6 @@ export function TableLongWeekendsList(props: LongWeekendsProps) {
     })
 
     return (
-        !props.isLoaded ? <p>Go back to the first page and select a country!</p> :
             <div className='tableLongWeekendsListContainer'>
                 <table className='tableLongWeekendsList'>
                     <thead className='tableHeadList'>
@@ -34,3 +37,11 @@ export function TableLongWeekendsList(props: LongWeekendsProps) {
             </div>
     )
 }
+
+// function mapStateToProps(state: any) {
+//   return {
+//     longWeekendsList: state.longWeekendsList,
+//   };
+// }
+
+export default TableLongWeekendsList;
