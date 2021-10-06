@@ -20,8 +20,10 @@ function MainPage(props: IHistory) {
   const redirectToResultPage = () => {
     let { history } = props;
     dispatch(loadList(key));
-    history.push("/ResultPage");
+    setTimeout(() => {
+      history.push("/ResultPage");
     console.log("redirect works");
+    }, 1500);
   };
 
   return (
