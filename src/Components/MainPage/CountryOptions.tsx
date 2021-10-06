@@ -9,7 +9,9 @@ export function GetCountryOptions() {
     
     React.useEffect(()=> {
         fetch(API_URL_GetAvailableCountries)
-            .then(res => res.json())
+            .then(res => {
+                console.log('res=%o', res);
+                   return res.json()})
             .then(
                 (result) => {
                     console.log('result=', result);
